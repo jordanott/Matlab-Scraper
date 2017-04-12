@@ -9,10 +9,9 @@ $ sudo apt-get install xvfb xserver-xephyr vnc4server
 $ sudo pip install pyvirtualdisplay
 ```
 
-#### Chrome Driver ####
-```
-$ wget https://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip
-```
+#### Install Drivers ####
+[Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/downloads)  
+[Firefox Driver](https://github.com/mozilla/geckodriver/releases)  
 
 ### About ###
 * [matlab_scraper.py](https://github.com/jordanott/Matlab-Scraper/blob/master/matlab_scraper.py) uses a Firefox webdriver to scrape the Matlab site  
