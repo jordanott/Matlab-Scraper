@@ -11,21 +11,22 @@ profile = webdriver.FirefoxProfile()
 profile.set_preference("browser.download.folderList", 2)
 profile.set_preference("browser.download.manager.showWhenStarting", False)
 profile.set_preference("browser.download.dir", '/home/jordan/Documents/Matlab_Downloads')
-profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "text/zip, none")
+profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "text/hdf, application/HDFView-2.13.0")
 
 # creating driver
 driver = webdriver.Firefox(firefox_profile=profile)
 
 # navigate to login page
 driver.get(login)
+time.sleep(10)
 
 # allows access to dynamic elements in iframe
 driver.switch_to.frame(driver.find_element_by_tag_name("iframe"))
-time.sleep(5)
+time.sleep(10)
 
 # enter login credentials
-driver.find_element_by_id('userId').send_keys('***********')
-driver.find_element_by_id('password').send_keys('***********')
+driver.find_element_by_id('userId').send_keys('jordanott365@gmail.com')
+driver.find_element_by_id('password').send_keys('Jordan1@')
 driver.find_element_by_id('submit').click()
 time.sleep(10)
 
@@ -34,8 +35,9 @@ driver.switch_to.default_content()
 
 # check if we are at the last page of links
 def last_page():
-	return True
+	return False
 
+page_num = 1
 while not last_page():
 	index = 0
 	while index < 50:
@@ -60,8 +62,9 @@ while not last_page():
 		driver.back()
 		time.sleep(4)
 		index += 1
+	driver.get(matlab_url.format(page_num))
+	page_num += 1
 	
 time.sleep(2)
 
 driver.quit()
-# buttons = []
