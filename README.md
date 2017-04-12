@@ -1,9 +1,15 @@
 # Matlab-Scraper
 
 ### Requirements ###  
+#### Selenium & VirtualDisplay ####
 ```
 $ pip install selenium
+$ sudo apt-get install xvfb xserver-xephyr vnc4server
+$ sudo pip install pyvirtualdisplay
 ```
 
-### Headless Browsing ###  
-[Running Selenium Headless](http://www.alittlemadness.com/2008/03/05/running-selenium-headless/)
+#### Chrome Driver ####
+```
+$ wget https://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip
+```
+
