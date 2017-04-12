@@ -24,8 +24,8 @@ driver.switch_to.frame(driver.find_element_by_tag_name("iframe"))
 time.sleep(5)
 
 # enter login credentials
-driver.find_element_by_id('userId').send_keys('jordanott365@gmail.com')
-driver.find_element_by_id('password').send_keys('Jordan1@')
+driver.find_element_by_id('userId').send_keys('***********')
+driver.find_element_by_id('password').send_keys('***********')
 driver.find_element_by_id('submit').click()
 time.sleep(10)
 
